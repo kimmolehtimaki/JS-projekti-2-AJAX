@@ -3,47 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Music Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <div. id="showcase" class="promo-area">
-      <div class="front-slider flexslider">
-        <ul class="slides">
-          <li>
-            <img src="..." data-type="posters">
-          </li>
-          <li>
-            <img src="..." data-type="posters">
-          </li>
-          <li>
-            <img src="..." data-type="posters">
-          </li>
-          <li>
-            <img src="..." data-type="posters">
-          </li>
-          <li>
-            <img src="..." data-type="posters">
-          </li>
-        </ul>
-      </div> <!-- etusivun .flexslider> -->
-      <div class="promo-content">
-        <div class="promo-text">
-          <h1 class="promo-title">Mitä haluaisit kuunnella tänään?</h1>
-          <p class="promo-text">Etsi mielimusiikkiasi artistin nimen perusteella</p>
-        </div><!-- .promo-text -->
-        </div><!-- .promo-content -->
-    </div><!-- #showcase .promo-area -->
-      <select id="artist" name="artist">
-        <option>Artisti 1</option>
-        <option>Artisti 2</option>
-        <input type="text" placeholder="Etsi esiintyjää nimen perusteella" />
+    <main>
+      <section
+        id="showcase"
+        class="relative bg-cover min-h-[400px] text-white flex items-center justify-center text-center"
+        style="background-image: url('slider-images/pexels-pixabay-164828.jpg')"
+      >
+        <div class="container-text">
+          <h1
+            class="promo-title text-5xl p-4 font-semibold text-left justify-start bg-teal-600 opacity-60 ml-72 -translate-x-80 -translate-y-12"
+          >
+            Mitä haluaisit kuunnella tänään?
+          </h1>
+          <p
+            class="promo-text inline-block relative z-0 p-4 text-lg text-black bg-white -ml-48 -translate-x-52 -translate-y-14"
+          >
+            Etsi mielimusiikkiasi artistin perusteella
+          </p>
+        </div>
+      </section>
+      <!-- <div. id="showcase" class="promo-area">
+      <div class="front-slider flexslider"> -->
+    </main>
+    <hr class="my-6 w-full border-t-4 border-(--pattern-fg)" />
+    <div class="dropdown-search flex justify-around">
+      <select id="artist w-lg border-t-1" name="artist">
+        Valitse artisti
       </select>
+      <option>Artisti 1</option>
+      <option>Artisti 2</option>
+      <input
+        class="input-search w-lg"
+        type="text"
+        placeholder="Etsi esiintyjää nimen perusteella"
+      />
     </div>
-    <div class="container" id="table">
-
-    </div>
-
+    <div class="container" id="table"></div>
 
     <script src="script.js"></script>
   </body>
