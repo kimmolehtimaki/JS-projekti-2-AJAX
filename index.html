@@ -7,13 +7,43 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div>
-      <h1>Mitä haluaisit katsoa tänään?</h1>
+    <div. id="showcase" class="promo-area">
+      <div class="front-slider flexslider">
+        <ul class="slides">
+          <li>
+            <img src="..." data-type="posters">
+          </li>
+          <li>
+            <img src="..." data-type="posters">
+          </li>
+          <li>
+            <img src="..." data-type="posters">
+          </li>
+          <li>
+            <img src="..." data-type="posters">
+          </li>
+          <li>
+            <img src="..." data-type="posters">
+          </li>
+        </ul>
+      </div> <!-- etusivun .flexslider> -->
+      <div class="promo-content">
+        <div class="promo-text">
+          <h1 class="promo-title">Mitä haluaisit kuunnella tänään?</h1>
+          <p class="promo-text">Etsi mielimusiikkiasi artistin nimen perusteella</p>
+        </div><!-- .promo-text -->
+        </div><!-- .promo-content -->
+    </div><!-- #showcase .promo-area -->
+      <select id="artist" name="artist">
+        <option>Artisti 1</option>
+        <option>Artisti 2</option>
+        <input type="text" placeholder="Etsi esiintyjää nimen perusteella" />
+      </select>
     </div>
-    <input type="radio" id="movie" name="elokuva" />
-    <label for="movie">Elokuva</label>
-    <input type="radio" id="theater" name="theater" />
-    <label for="theater">Teatteri</label>
+    <div class="container" id="table">
+
+    </div>
+
 
     <script src="script.js"></script>
   </body>
