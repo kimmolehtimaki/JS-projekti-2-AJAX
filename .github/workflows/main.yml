@@ -1,0 +1,28 @@
+name: Fetch key from Github
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+          MOVIE_API_KEY: ${{secrets.MOVIE_API_KEY}}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependancies
+        run: npm install
+      
+      - name: run tests
+        run: npm run test
+
+      - name: Use API key
+        run: |
+          echo "API key loaded!"
+          echo "Key length: ${#MOVIE_API_KEY}"
