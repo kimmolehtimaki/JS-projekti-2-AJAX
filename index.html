@@ -11,14 +11,10 @@
       <section
         id="showcase"
         class="relative bg-cover min-h-[400px] text-white flex items-center justify-center text-center"
-        style="background-image: url('slider-images/pexels-pixabay-164828.jpg')"
+        style="background-image: url('images/pexels-pixabay-164828.jpg')"
       >
         <div class="container-text">
-          <h1
-            class="promo-title text-5xl p-4 font-semibold text-left justify-start bg-teal-600 opacity-60 ml-72 -translate-x-80 -translate-y-12"
-          >
-            Mitä haluaisit kuunnella tänään?
-          </h1>
+          <h1 class="promo-title text-5xl p-4 font-semibold text-left justify-start bg-teal-600 opacity-60 ml-72 -translate-x-80 -translate-y-12">Mitä haluaisit kuunnella tänään?</h1>
           <p
             class="promo-text inline-block relative z-0 p-4 text-lg text-black bg-white -ml-48 -translate-x-52 -translate-y-14"
           >
@@ -26,12 +22,31 @@
           </p>
         </div>
       </section>
-      <!-- <div. id="showcase" class="promo-area">
-      <div class="front-slider flexslider"> -->
+      
     </main>
     <hr class="my-6 w-full border-t-4 border-(--pattern-fg)" />
-    <div class="dropdown-search flex justify-around">
-      <select id="artist w-lg border-t-1" name="artist">
+    
+    <!-- Dropdown-valikko -->
+    <div id="dropdownRoot" class="relative inline-block m-4">
+    <!-- dropdown-nappi   -->
+    <button id="dropdownBtn" type="button" class="border-solid border-gray w-[300px] p-2 border-2 cursor-pointer font-bold flex justify-between">Valitse artisti
+      
+      <img id="chevron" width="10" src="icon.svg.svg">
+    </button>
+    
+      <div 
+        id="dropdown" 
+        class="rounded border-[1px] border-gray-300 bg-white p-4 absolute left-0 mt-2 w-[400px] shadow-md hidden"
+        role="menu">
+          <div class="cursor-pointer hover:bg-gray-300 p-2">Artisti 1</div>
+          <div class="cursor-pointer hover:bg-gray-300 p-2">Artisti 2</div>
+    
+      </div>
+    </div>
+    
+    
+    <!-- <div class="dropdown-search flex justify-around">
+      <select id="artist w-lg border-t-1 px-5 py-2 roundded" name="artist">
         Valitse artisti
       </select>
       <option>Artisti 1</option>
@@ -41,7 +56,7 @@
         type="text"
         placeholder="Etsi esiintyjää nimen perusteella"
       />
-    </div>
+    </div> -->
     <div class="container" id="table"></div>
 
     <script src="script.js"></script>
