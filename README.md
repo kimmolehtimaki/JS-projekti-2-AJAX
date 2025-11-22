@@ -84,6 +84,11 @@ showActiveButton.addEventListener("click", function() {
 - [freeCodeCamp.org](https://www.youtube.com/watch?v=5fb2aPlgoys)
 - [Mika Stenberg](https://mika-stenberg.gitbook.io/web-sovelluksia-javascriptin-avulla) , lisäksi Laurea Canvaksen materiaali
 - [mimo.org] (mimo.org) Javascript ja Front-End developer -moduulit
+- [Andy's Tech Tutorials] - The Movie Database API Tutorial (https://www.youtube.com/watch?v=FlFyrOEz2S4)
+Tailwind-muotoilun apuna käytin seuraavia Youtubesta löytyviä tutorialeja:
+    - [Tyler_Potts] - Tailwind CSS for Beginners: Build Websites Faster(https://www.youtube.com/watch?v=dcRenJApot0)
+    - [AyyazTech] - How to create dropdown in tailwind CSS(https://www.youtube.com/watch?v=h-vhYwFlgSk)
+    
 
 ## Lisenssi
 
