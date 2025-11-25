@@ -88,6 +88,7 @@ showActiveButton.addEventListener("click", function() {
 Tailwind-muotoilun apuna käytin seuraavia Youtubesta löytyviä tutorialeja:
     - [Tyler_Potts] - Tailwind CSS for Beginners: Build Websites Faster(https://www.youtube.com/watch?v=dcRenJApot0)
     - [AyyazTech] - How to create dropdown in tailwind CSS(https://www.youtube.com/watch?v=h-vhYwFlgSk)
+- [Lavarian,Laza] - Convert a dd/mm/yy string to Date objec in Javascript
     
 
 ## Lisenssi
