@@ -1,3 +1,11 @@
+// haetaan API-avain Githubista
+const API_key = process.env.MOVIE_API_KEY;
+if (API_KEY) {
+  console.log("API-avain ladattu turvallisesti Github Actionista");
+  } else {
+    console.error("VIRHE: API-avaimen lataaminen epäonnistui")
+  }
+
 // Määritetään muuttujat väkäselle ja napille
 const chevron = document.getElementById("chevron");
 const ddBtn = document.getElementById("dropdownBtn");
@@ -30,7 +38,7 @@ function fetchTrending() {
             
     var xmlhttp = new XMLHttpRequest();
     //määritetään dynaamisesti muuttuja URL:lle, jotta saadaan API-kutsu muuttumaan käyttäjän valinnan mukaisesti
-    const url = `https://api.themoviedb.org/3/trending/movie/${timeWindow}?api_key=75b11fc2e5b77958825f59ca418f0b6b`;
+    const url = `https://api.themoviedb.org/3/trending/movie/${timeWindow}?api_key=${API_KEY}`;
 
     xmlhttp.open("GET", url, true);
     //lähetetään kutsu
@@ -62,7 +70,7 @@ function fetchKeyword() {
 
   var xmlhttp = new XMLHttpRequest();
     //määritetään dynaamisesti muuttuja URL:lle, jotta saadaan API-kutsu muuttumaan käyttäjän valinnan mukaisesti
-    const url = `https://api.themoviedb.org/3/search/movie?query=${keyword}&include_adult=false&language=en-US&page=1'&api_key=75b11fc2e5b77958825f59ca418f0b6b`;
+    const url = `https://api.themoviedb.org/3/search/movie?query=${keyword}&include_adult=false&language=en-US&page=1'&api_key=${API_KEY}`;
 
      xmlhttp.open("GET", url, true);
     //lähetetään kutsu

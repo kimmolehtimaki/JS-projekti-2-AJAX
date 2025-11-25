@@ -1,28 +1,22 @@
 name: Fetch key from Github
 
-on:
-  push:
-    branches:
-      - main
-
+on: [push]
+    
 jobs:
-  build:
+  testaus:
     runs-on: ubuntu-latest
 
     env:
-          MOVIE_API_KEY: ${{secrets.MOVIE_API_KEY}}
+        MOVIE_API_KEY: ${{ secrets.MOVIE_API_KEY }}
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install dependancies
+      - name: Asenna riippuvuudet
         run: npm install
       
-      - name: run tests
+      - name: Aja testit avaimella
         run: npm run test
 
-      - name: Use API key
-        run: |
-          echo "API key loaded!"
-          echo "Key length: ${#MOVIE_API_KEY}"
+      
