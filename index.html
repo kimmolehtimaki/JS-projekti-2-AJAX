@@ -48,14 +48,16 @@
     </div>
     
     <!-- Hakukenttä -->
-    <div id="textSearch" class="border-solid border-gray-400 border-2 flex justify-between hover:border-amber-400">
-        <input class="relative inline-block w-64" placeholder="Etsi avainsanalla...">
+    <div id="Search" class="border-solid border-gray-400 border-2 flex justify-between hover:border-amber-400">
+        <input id="textSearch" class="relative inline-block w-64" placeholder="Etsi avainsanalla...">
+        <button id="searchBtn" class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+        onclick="fetchKeyword()">Etsi</button>
     </div>
   </div>
   
   
     
-    <div id="movieTable" class="border solid border-gray-400 border-2"></div>
+    <div id="movieTable" class="m-4 border solid border-gray-400 border-2"></div>
 
 <footer class="bg-gray-500 text-gray-300 py-6 mt-auto">
   <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
