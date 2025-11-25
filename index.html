@@ -27,18 +27,24 @@
   <div class="flex justify-around">
     
     <!-- Dropdown-valikko ja sen "nappi"   -->
-    <div id="dropdownRoot" class="relative inline-block">
+    <!-- <div id="dropdownRoot" class="relative inline-block">
      <button onclick="toggleDropdown()" id="dropdownBtn" type="button" class="border-solid border-gray-400 w-64 p-2 border-2 cursor-pointer hover:border-amber-400 flex justify-between">Valitse
-       <img id="chevron" width="10" src="images/chevron-down.svg">
-      </button>
+       
+      </button> -->
      
-    <!-- Dropdown -laatikko -->
-      <div id="dropdown-box" 
-        class="absolute left-0 mt-2 w-full rounded border-[1px] border-gray-300 bg-white p-2 shadow-md hidden"
-        role="menu">
-          <div class="cursor-pointer hover:bg-gray-300 p-2">Päivän suosituimmat</div>
-          <div class="cursor-pointer hover:bg-gray-300 p-2">Viikon suosituimmat</div>
-      </div>
+    <!-- Dropdown -laatikko --> <!-- "absolute left-0 mt-2 w-full rounded border-[1px] border-gray-300 bg-white p-2 shadow-md hidden" -->
+      
+      
+     <div id="dropdown-box" class="flex">
+        <select 
+        name="mySelect" 
+        id="timeWindow" 
+        class="border-solid border-gray-400 border-2 justify-between hover:border-amber-400 w-64"
+        onchange="fetchTrending()">
+          <option value="" disabled selected>Valitse ajanjakso</option>
+          <option value="day">Päivän suosituimmat</option>
+          <option value="week">Viikon suosituimmat</option>
+        </select>       
     </div>
     
     <!-- Hakukenttä -->
@@ -49,7 +55,7 @@
   
   
     
-    <div class="container" id="movieTable"></div>
+    <div id="movieTable" class="border solid border-gray-400 border-2"></div>
 
 <footer class="bg-gray-500 text-gray-300 py-6 mt-auto">
   <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
