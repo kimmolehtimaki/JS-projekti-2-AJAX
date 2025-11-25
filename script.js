@@ -1,5 +1,5 @@
 // haetaan API-avain Githubista
-const API_key = process.env.MOVIE_API_KEY;
+const API_KEY = process.env.MOVIE_API_KEY;
 if (API_KEY) {
   console.log("API-avain ladattu turvallisesti Github Actionista");
   } else {
