@@ -22,6 +22,9 @@ ddBtn.addEventListener("click", (e) => {
 
 //API-kutsu pudotusvalikon kautta
 function fetchTrending() {
+  //tyhjennetääntextSearch -kenttä
+  let emptySearch = document.getElementById("textSearch");
+  emptySearch.value = "";
   //muuttuja elokuvalle
     let timeWindow = document.getElementById("timeWindow").value;
             
@@ -52,6 +55,9 @@ function fetchTrending() {
 //API-kutsu avainsanan perusteella
 
 function fetchKeyword() {
+  // asetaan dropdown oletukseen
+  document.getElementById("timeWindow").value = "";
+  
   let keyword = document.getElementById("textSearch").value;
 
   var xmlhttp = new XMLHttpRequest();
@@ -80,15 +86,20 @@ function fetchKeyword() {
 
 //Taulukon renderöinti
 function renderTable(movies) {
+  //tuodaan taulukko näkyävksi poistamalla "hidden"
+  let openTable = document.getElementById("movieTable");
+  openTable.classList.remove("hidden");
   //litätään rivit taulukkoon
-            let table = `<table border="1">
-                        <tr>
-                            <th>Elokuva</th>
-                            <th>Alkuperäiskieli</th>
-                            <th>Julkaisupäivä</th>
-                            <th>Arvostelut</th>
-                            <th>Juliste</th>
-                        </tr>`;
+            let table = `<table>
+                          <thead class="text-left bg-gray-200">
+                            <tr>
+                                <th>Elokuva</th>
+                                <th>Alkuperäiskieli</th>
+                                <th>Julkaisupäivä</th>
+                                <th>Arvostelut</th>
+                                <th>Juliste</th>
+                            </tr>
+                          </thead>`;
                         
 
             //käydään elokuvat läpi for-silmukalla
@@ -109,14 +120,15 @@ function renderTable(movies) {
             // luodaan otsikot silmukan jokaisella kierroksella uusi rivi
             //kovakoodataan poster koko w=92px, voisi konfiguroida, mutta dokumentaation mukaan tämäkin toiminee
             // https://developer.themoviedb.org/reference/configuration-details
-              table+= `
+              table+= `<tbody class="border">
                         <tr>
                             <td>${title}</td>
                             <td>${language}</td>
                             <td>${dateFormat}</td>
                             <td>${(votes.toFixed(1))}</td>
                             <td><img src="https://image.tmdb.org/t/p/w92${poster}"></td>
-                        </tr>`;
+                        </tr>
+                      </tbody>`;
             } //for-silmukka päättyy
               table+=`</table>`;
             //lisätään sisältö div:iin
