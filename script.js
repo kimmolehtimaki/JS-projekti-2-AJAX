@@ -2,7 +2,8 @@
 const chevron = document.getElementById("chevron");
 const ddBtn = document.getElementById("dropdownBtn");
 // const open = !menu.classList.toggle("hidden");
-const closed = menu.classList.toggle("hidden");
+// const closed = menu.classList.toggle("hidden");
+const searchBtn = document.getElementById("searchBtn");
 
 // Dropdown-valikon avaaminen
 function toggleDropdown() {
@@ -30,6 +31,7 @@ function fetchTrending() {
     xmlhttp.open("GET", url, true);
     //lähetetään kutsu
     xmlhttp.send();
+  
 
     //luodaan vastauksen käsittelijä
     xmlhttp.onreadystatechange=function() {
@@ -67,7 +69,7 @@ function fetchTrending() {
                             <td>${title}</td>
                             <td>${language}</td>
                             <td>${date}</td>
-                            <td>${votes}</td>
+                            <td>${(votes.toFixed(1))}</td>
                             <td><img src="https://image.tmdb.org/t/p/w92${poster}"></td>
                         </tr>`;
             } //for-silmukka päättyy
@@ -76,6 +78,20 @@ function fetchTrending() {
             document.getElementById("movieTable").innerHTML = table;
         } //if päättyy
       }   
+};
+
+//API-kutsu avainsanan perusteella
+
+function fetchKeyword() {
+  let keyword = document.getElementById("textSearch").value;
+
+  var xmlhttp = new XMLHttpRequest();
+    //määritetään dynaamisesti muuttuja URL:lle, jotta saadaan API-kutsu muuttumaan käyttäjän valinnan mukaisesti
+    const url = `https://api.themoviedb.org/3/search/movie?query=${keyword}&include_adult=false&language=en-US&page=1'&api_key=75b11fc2e5b77958825f59ca418f0b6b`;
+
+     xmlhttp.open("GET", url, true);
+    //lähetetään kutsu
+    xmlhttp.send();
 };
 
 
