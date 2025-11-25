@@ -1,3 +1,9 @@
+const API_KEY = process.env.MOVIE_API_KEY; 
+if (API_KEY) {
+  console.log("API-avain ladattu turvallisesti GitHub Actionista");
+} else {
+  console.error("VIRHE: API-avainta ei löydy ympäristömuuttujista");
+}
 
 // Määritetään muuttujat väkäselle ja napille
 const chevron = document.getElementById("chevron");
@@ -31,7 +37,7 @@ function fetchTrending() {
             
     var xmlhttp = new XMLHttpRequest();
     //määritetään dynaamisesti muuttuja URL:lle, jotta saadaan API-kutsu muuttumaan käyttäjän valinnan mukaisesti
-    const url = `https://api.themoviedb.org/3/trending/movie/${timeWindow}?api_key=${API_KEY}`;
+    const url = `https://api.themoviedb.org/3/trending/movie/${timeWindow}?api_key=${process.env.MOVIE_API_KEY}`;
 
     xmlhttp.open("GET", url, true);
     //lähetetään kutsu
@@ -63,7 +69,7 @@ function fetchKeyword() {
 
   var xmlhttp = new XMLHttpRequest();
     //määritetään dynaamisesti muuttuja URL:lle, jotta saadaan API-kutsu muuttumaan käyttäjän valinnan mukaisesti
-    const url = `https://api.themoviedb.org/3/search/movie?query=${keyword}&include_adult=false&language=en-US&page=1'&api_key=${API_KEY}`;
+    const url = `https://api.themoviedb.org/3/search/movie?query=${keyword}&include_adult=false&language=en-US&page=1'&api_key=${process.env.MOVIE_API_KEY}`;
 
      xmlhttp.open("GET", url, true);
     //lähetetään kutsu
