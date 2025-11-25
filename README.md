@@ -52,21 +52,21 @@ Sovellus ei sisällä suuria bugeja tai virheitä. Tosin hakutulokset palauttava
 ## Kuvakaappaukset
 
 Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksesta  
-`https://laureauas-my.sharepoint.com/:i:/g/personal/kil00006_laurea_fi/EUzsSsnOXa1BhqTqaGOqALgB2OONlKEvyLiv2vihh-3M_g?e=tiWzpG`
+`https://laureauas-my.sharepoint.com/:i:/g/personal/kil00006_laurea_fi/IQATwJDUBdYTSp_q40fiIgoJAcwjj6NdDCmpH8cxdx-4xzs?e=2rJlab`
 
 ## Teknologiat
 
 Kuvaa, mitä teknologioita käytettiin ja mikä oli niiden rooli projektissasi.  
 Käytin seuraavia teknologioita: `html`, `JavaScript`
-CSS-muotoiluun käytin Visual Studio Coden "Tailwind" laajennusta
-CSS ja JavaScript eritytettiin omiin tiedostoihinsa.
+Sovelluksen tyylien muotoiluun käytin Tailwindcss:ää ja Visual Studio Coden "Tailwind" laajennusta. En ladannut erillisiä Tailwind-kirjastoja vaan tyylit haettiin Tailwindin CDN:n kautta, joka toimii mielestäni näin pienissä tehtävissä.
+JavaScript eritytettiin omaan tiedostoon.
 
 ## Asennus
 
 Kirjoita lyhyet ohjeet sovelluksen käynnistämiseen ja käyttöön. Esimerkiksi:
 
 - lataa kaikki tiedostot ja avaa index.html selaimessasi
-- sovelluksen julkinen repositorio: 
+- sovelluksen julkinen repositorio: https://github.com/kimmolehtimaki/JS-projekti-2-AJAX.git
 
 ## Kiitokset
 
