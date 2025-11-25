@@ -5,8 +5,8 @@
 
 const root = document.getElementById('dropdownRoot');
   const btn = document.getElementById('dropdownBtn');
-  const menu = document.getElementById('dropdown');
-  const chevron = document.getElementById('chevron');
+  const menu = document.getElementById('dropdown-box');
+  const chevron = document.getElementById('chevron-down');
 
   function toggleDropdown() {
     const open = menu.classList.toggle('hidden') === false;
