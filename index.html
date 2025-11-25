@@ -3,22 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music Player</title>
+    <title>Movie search</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <!-- Sivuston min-height koko näyttö -> footer "stickynä" alareunassa -->
+  <body class="flex flex-col min-h-screen">
     <main>
       <section
         id="showcase"
-        class="bg-cover min-h-[400px] text-white flex items-center justify-center"
-        style="background-image: url('images/pexels-pixabay-164828.jpg')"
-      >
-        <div class="container mx-2px px-4">
-          <h1 class="promo-title min-w-[300px] text-xl sm:text-2xl md:text-3xl p-3 mx-1 font-semibold text-left bg-teal-600 opacity-60 ml-72 -translate-x-80 -translate-y-12 break-words">Mitä haluaisit kuunnella tänään?</h1>
-          <p
-            class="promo-text inline-block relative z-0 p-4 m-1 text-sm sm:text base md:text-lg text-black bg-white -ml-5 -translate-y-14"
-          >
-            Etsi mielimusiikkiasi artistin perusteella
+        class="relative bg-cover min-h-[400px] text-white flex items-center justify-center text-center"
+        style="background-image: url('images/pexels-cottonbro-3945325.jpg')">
+        <div class="showcase-text">
+          <h1 class="promo-title bg-teal-600 opacity-90 text-white font-semibold p-4 text-3xl sm:text-4xl md:text-6xl ml-0 break-words">Mitä elokuvaa katsoa?</h1>
+          <p class="promo-text inline-block bg-white opacity-80 text-black z-0 p-2 m-1 text-base sm:text-lg md:text-xl">Valitse suosituimmista tai etsi itse
           </p>
         </div>
       </section>
@@ -26,46 +23,47 @@
     </main>
     <hr class="my-6 w-full border-t-4 border-(--pattern-fg)" />
     
-    <!-- Valinta-container:t -->
-    <div class="flex justify-around">
+  <!-- Valinta-container -->
+  <div class="flex justify-around">
+    
+    <!-- Dropdown-valikko ja sen "nappi"   -->
     <div id="dropdownRoot" class="relative inline-block">
-      
-    <!-- Dropdown-valikko (nappi)   -->
-    <button id="dropdownBtn" type="button" class="border-solid border-gray-400 w-64 p-2 border-2 cursor-pointer hover:border-amber-400 flex justify-between">Valitse artisti
-      
-      <img id="chevron" width="10" src="icon.svg">
-    </button>
+     <button id="dropdownBtn" type="button" class="border-solid border-gray-400 w-64 p-2 border-2 cursor-pointer hover:border-amber-400 flex justify-between">Valitse
+       <img id="chevron" width="10" src="images/chevron-down.svg">
+      </button>
+     
+    <!-- Dropdown -laatikko -->
+      <div id="dropdown-box" 
+        class="absolute left-0 mt-2 w-full rounded border-[1px] border-gray-300 bg-white p-2 shadow-md hidden"
+        role="menu">
+          <div class="cursor-pointer hover:bg-gray-300 p-2">Päivän suosituimmat</div>
+          <div class="cursor-pointer hover:bg-gray-300 p-2">Viikon suosituimmat</div>
+      </div>
     </div>
+    
+    <!-- Hakukenttä -->
     <div id="textSearch" class="border-solid border-gray-400 border-2 flex justify-between hover:border-amber-400">
         <input class="relative inline-block w-64" placeholder="Etsi avainsanalla...">
     </div>
-      <div 
-        id="dropdown" 
-        class="rounded border-[1px] border-gray-300 bg-white p-4 absolute left-10 mt-10 w-[300px] shadow-md hidden"
-        role="menu">
-          <div class="cursor-pointer hover:bg-gray-300 p-2">Artisti 1</div>
-          <div class="cursor-pointer hover:bg-gray-300 p-2">Artisti 2</div>
+  </div>
+  
+  
     
-      </div>
-    </div>
-    <!-- <div class="w-full max-w-sm min-w-[200px]">
-  <input class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Type here..."> -->
-</div>
-    
-    <!-- <div class="dropdown-search flex justify-around">
-      <select id="artist w-lg border-t-1 px-5 py-2 roundded" name="artist">
-        Valitse artisti
-      </select>
-      <option>Artisti 1</option>
-      <option>Artisti 2</option>
-      <input
-        class="input-search w-lg"
-        type="text"
-        placeholder="Etsi esiintyjää nimen perusteella"
-      />
-    </div> -->
-    <div class="container" id="table"></div>
+    <div class="container" id="movieTable"></div>
 
+<footer class="bg-gray-500 text-gray-300 py-6 mt-auto">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div id="tmdb" class="text-lg">
+      <p>Sovelluksessa käytetty The Movie Database (TMDB) -rajapintaa</p>
+    </div>
+    <div class="flex items-center">
+      <img
+        src="images/tmdb.svg"
+        alt="TMDB logo"
+        class="h-8"/>
+    </div>
+  </div>
+</footer>
     <script src="script.js"></script>
   </body>
 </html>
