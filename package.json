@@ -1,0 +1,12 @@
+{
+  "name": "js-projekti-2-ajax",
+  "version": "1.0.0",
+  "description": "Projektin nimi on \"Elokuvaideat\", tekijänä Kimmo Lehtimäki",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
