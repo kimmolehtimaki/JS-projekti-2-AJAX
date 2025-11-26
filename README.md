@@ -4,8 +4,8 @@ Projektin nimi on "Elokuvaideat", tekijänä Kimmo Lehtimäki
 
 ## Verkkolinkit:
 
-Pääset julkaistuun sovellukseen käsiksi osoitteessa https://kimmotodo.netlify.app/
-Linkki projektin videoesittelyyn [ScreenPal](https://go.screenpal.com...)
+Pääset julkaistuun sovellukseen käsiksi osoitteessa [https://kimmoajax.netlify.app]
+Linkki projektin videoesittelyyn [ScreenPal](https://go.screenpal.com/watch/cTXOVonqwE9)
 
 ## Työn jakautuminen
 

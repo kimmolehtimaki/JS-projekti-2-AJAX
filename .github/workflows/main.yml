@@ -1,22 +1,44 @@
-name: Fetch key from Github
+# name: Fetch key from Github
 
-on: [push]
+# on: [push]
     
-jobs:
-  testaus:
-    runs-on: ubuntu-latest
+# jobs:
+#   testaus:
+#     runs-on: ubuntu-latest
 
+#     env:
+#         MOVIE_API_KEY: ${{ secrets.MOVIE_API_KEY }}
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+
+#       - name: Asenna riippuvuudet
+#         run: npm install
+      
+#       - name: Aja testit avaimella
+#         run: npm run test
+
+name: Smoke call with secret
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  call_api:
+    runs-on: ubuntu-latest
     env:
-        MOVIE_API_KEY: ${{ secrets.MOVIE_API_KEY }}
+      MOVIE_API_KEY: ${{ secrets.MOVIE_API_KEY }}
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Asenna riippuvuudet
-        run: npm install
-      
-      - name: Aja testit avaimella
-        run: npm run test
-
-      
+      - name: Smoke: GET ulkoiseen API:in Bearer-avaimella
+        run: |
+          curl -fsSL \
+            -H "Authorization: Bearer $MOVIE_BEARER" \
+            "https://api.themoviedb.org/3/movie/11" | jq .
+     
