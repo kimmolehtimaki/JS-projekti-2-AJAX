@@ -60,6 +60,7 @@ Kuvaa, mitä teknologioita käytettiin ja mikä oli niiden rooli projektissasi.
 Käytin seuraavia teknologioita: `html`, `JavaScript`
 Sovelluksen tyylien muotoiluun käytin Tailwindcss:ää ja Visual Studio Coden "Tailwind" laajennusta. En ladannut erillisiä Tailwind-kirjastoja vaan tyylit haettiin Tailwindin CDN:n kautta, joka toimii mielestäni näin pienissä tehtävissä.
 JavaScript eritytettiin omaan tiedostoon.
+API-kutsujen validointiin käytin Postman-ohjelmistoa.
 
 ## Asennus
 
