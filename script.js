@@ -115,7 +115,7 @@ function renderTable(movies) {
               let language = movies[i].original_language;
               let date = movies[i].release_date;
               // parsitaan lokaaliksi dateObj:ksi (fi)
-              let dateString = '2025-11-13'
+              let dateString = date;
               let [year, month, day] = dateString.split('-');
               const dateObj = new Date(+year, +month -1, +day);
               let dateFormat = dateObj.toLocaleDateString('de-De');
